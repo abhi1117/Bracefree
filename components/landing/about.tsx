@@ -128,7 +128,6 @@ export default function AboutSection() {
           BraceFree delivers clinically guided care, premium comfort, and
           results you can trust — at a price designed for you.
         </motion.p>
-
       </div>
     </section>
   );

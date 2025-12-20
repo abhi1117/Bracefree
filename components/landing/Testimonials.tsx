@@ -18,7 +18,6 @@ const testimonials: Testimonial[] = [
   { name: "Ananya Gupta", message: "The digital smile plan gave me full confidence. Professional and reliable treatment." },
   { name: "Karan Singh", message: "Excellent service from consultation to finish. BraceFree delivers what it promises." },
 ];
-
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(4);
