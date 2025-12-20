@@ -95,8 +95,8 @@ export default function Testimonials() {
 
         {/* Heading */}
         <div className="text-center mb-12">
-          <h1
-            className="
+<h1
+  className="
     text-center
     text-[26px]
     sm:text-[36px]
@@ -105,11 +105,12 @@ export default function Testimonials() {
     mb-4 sm:mb-6
     tracking-tight
     text-gray-900
-    dark:text-white
+    dark:text-black
   "
-          >
-            What Our Patients Say
-          </h1>
+>
+  What Our Patients Say
+</h1>
+
 
           <p className="mt-3 text-gray-600">
             Real experiences from people who transformed their smiles with BraceFree
