@@ -1,0 +1,3 @@
+{
+  "/(pages)/(auth-pages)/getstarted/verification/page": "app/(pages)/(auth-pages)/getstarted/verification/page.js"
+}

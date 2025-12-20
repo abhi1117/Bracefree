@@ -1,0 +1,3 @@
+{
+  "/(pages)/(auth-pages)/get-started/page": "app/(pages)/(auth-pages)/get-started/page.js"
+}

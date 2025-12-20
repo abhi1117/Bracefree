@@ -1,0 +1,11 @@
+{
+  "[project]/components/onbording/ServiceMap.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/onbording/ServiceMap.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_37d29022._.js",
+      "static/chunks/components_onbording_ServiceMap_tsx_ef307a52._.js",
+      "static/chunks/node_modules_fe3b6aaa._.css",
+      "static/chunks/components_onbording_ServiceMap_tsx_a991fe50._.js"
+    ]
+  }
+}
