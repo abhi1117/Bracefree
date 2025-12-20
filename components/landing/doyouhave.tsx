@@ -6,6 +6,7 @@ export default function Doyouhave() {
       id="doyouhave"
       className="w-full mt-4 px-4 sm:px-6 lg:px-10"
     >
+      
       {/* Heading */}
       <h1
         className="
@@ -46,8 +47,7 @@ export default function Doyouhave() {
           className="
             object-contain
             object-top       /* ⬅ KEY FIX: removes top/bottom empty space */
-          "
-        />
+          "        />
       </div>
     </section>
   );

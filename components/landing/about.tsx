@@ -113,9 +113,7 @@ export default function AboutSection() {
               className="object-contain object-top"
             />
           </motion.div>
-
         </div>
-
         {/* FOOTER */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
