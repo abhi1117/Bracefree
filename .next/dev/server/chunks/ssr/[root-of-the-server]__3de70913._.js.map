@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/singh/Desktop/workly_web_provider/app/%28pages%29/%28provider%29/provider/page.tsx"],"sourcesContent":["import React from \"react\";\r\n\r\nexport default function ProviderPage() {\r\n  return <div>page</div>;\r\n}\r\n"],"names":[],"mappings":";;;;;;AAEe,SAAS;IACtB,qBAAO,8OAAC;kBAAI;;;;;;AACd","debugId":null}}]
-}

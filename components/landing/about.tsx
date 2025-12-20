@@ -32,8 +32,8 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="w-full bg-white py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="about" className="w-full bg-white py-16 sm:py-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
         {/* HEADER */}
         <motion.div
@@ -41,24 +41,24 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-14"
+          className="max-w-3xl mb-12 sm:mb-14"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
             About BraceFree Clear Aligners
           </h2>
 
-          <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+          <p className="mt-5 sm:mt-6 text-base sm:text-lg text-gray-700 leading-relaxed">
             BraceFree introduces a new orthodontic standard — combining
             orthodontist-led planning with advanced digital technology for
             precise, comfortable, and predictable smile transformations.
           </p>
         </motion.div>
 
-        {/* MAIN GRID (LEFT SIDE WIDER) */}
-        <div className="relative grid lg:grid-cols-[1.2fr_0.8fr] gap-14 items-start">
+        {/* MAIN GRID */}
+        <div className="relative grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-14 items-start">
 
-          {/* LEFT: FEATURES (WIDER CARDS) */}
-          <div className="grid sm:grid-cols-2 gap-6 relative z-10">
+          {/* FEATURES */}
+          <div className="grid sm:grid-cols-2 gap-5 sm:gap-6 relative z-10">
             {features.map((item, index) => (
               <motion.div
                 key={index}
@@ -70,15 +70,15 @@ export default function AboutSection() {
                   bg-white
                   rounded-2xl
                   border border-gray-100
-                  p-7 lg:p-8
+                  p-6 sm:p-7 lg:p-8
                   shadow-[0_4px_20px_rgba(0,0,0,0.05)]
                   hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)]
                   transition-all
                 "
               >
-<h3 className="text-[17px] md:text-lg font-medium text-gray-900 leading-snug tracking-tight">
-  {item.title}
-</h3>
+                <h3 className="text-[16px] sm:text-[17px] md:text-lg font-medium text-gray-900 leading-snug tracking-tight">
+                  {item.title}
+                </h3>
 
                 <p className="mt-3 text-sm text-gray-600 leading-relaxed">
                   {item.desc}
@@ -87,7 +87,7 @@ export default function AboutSection() {
             ))}
           </div>
 
-          {/* IMAGE (UNCHANGED) */}
+          {/* IMAGE (UNCHANGED — DESKTOP ONLY) */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -122,7 +122,7 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-16 max-w-4xl text-lg text-gray-700 leading-relaxed"
+          className="mt-14 sm:mt-16 max-w-4xl text-base sm:text-lg text-gray-700 leading-relaxed"
         >
           Whether you need mild corrections or a complete smile makeover,
           BraceFree delivers clinically guided care, premium comfort, and

@@ -29,8 +29,8 @@ export default function Testimonials() {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const total = testimonials.length;
-  const TRANSITION_MS = 700;
   const CARD_WIDTH = 100 / cardsPerView;
+  const TRANSITION_MS = 700;
 
   /* ---------- RESPONSIVE ---------- */
   useEffect(() => {
@@ -38,6 +38,8 @@ export default function Testimonials() {
       if (window.innerWidth < 640) setCardsPerView(1);
       else if (window.innerWidth < 1024) setCardsPerView(2);
       else setCardsPerView(4);
+
+      setIndex(0); // reset to avoid misalignment
     };
 
     updateCards();
@@ -48,8 +50,9 @@ export default function Testimonials() {
   /* ---------- AUTO SCROLL ---------- */
   useEffect(() => {
     intervalRef.current = setInterval(() => {
-      if (pausedRef.current) return;
-      setIndex((prev) => prev + 1);
+      if (!pausedRef.current) {
+        setIndex((prev) => prev + 1);
+      }
     }, 3000);
 
     return () => {
@@ -57,7 +60,7 @@ export default function Testimonials() {
     };
   }, []);
 
-  /* ---------- SEAMLESS LOOP RESET ---------- */
+  /* ---------- SEAMLESS LOOP ---------- */
   useEffect(() => {
     if (index === total) {
       setTimeout(() => {
@@ -67,14 +70,12 @@ export default function Testimonials() {
     }
   }, [index, total]);
 
-  /* ---------- RE-ENABLE TRANSITION ---------- */
   useEffect(() => {
     if (!enableTransition) {
       requestAnimationFrame(() => setEnableTransition(true));
     }
   }, [enableTransition]);
 
-  /* ---------- CONTROLS (EXACT LIKE TEAM) ---------- */
   const next = () => setIndex((prev) => prev + 1);
 
   const prev = () => {
@@ -90,9 +91,10 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="w-full py-24 bg-[#f0f4f8] overflow-x-hidden"
+      className="w-full py-20 bg-[#f0f4f8] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4">
+
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -105,22 +107,19 @@ export default function Testimonials() {
 
         {/* Carousel */}
         <div
-          className="relative overflow-hidden px-3"
+          className="relative overflow-hidden"
           onMouseEnter={() => (pausedRef.current = true)}
           onMouseLeave={() => (pausedRef.current = false)}
         >
           <div
-            className={`flex will-change-transform ${
-              enableTransition
-                ? "transition-transform duration-700 ease-in-out"
-                : ""
-            }`}
+            className={`flex ${enableTransition ? "transition-transform duration-700 ease-in-out" : ""}`}
             style={{ transform: `translateX(-${index * CARD_WIDTH}%)` }}
           >
             {[...testimonials, ...testimonials].map((t, i) => (
               <div
                 key={i}
-                className="min-w-full sm:min-w-[50%] lg:min-w-[25%] px-3"
+                style={{ width: `${CARD_WIDTH}%` }}
+                className="px-3 flex-shrink-0"
               >
                 <div className="bg-white rounded-xl shadow-sm p-6 h-[260px] flex flex-col justify-between">
                   <div className="flex gap-1 mb-3">
@@ -145,18 +144,18 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Controls — SAME AS TEAM */}
+        {/* Controls */}
         <div className="flex justify-center gap-4 mt-8">
           <button
             onClick={prev}
-            className="bg-white shadow-md p-3 rounded-full hover:bg-gray-200 cursor-pointer"
+            className="bg-white shadow-md p-3 rounded-full hover:bg-gray-200"
           >
             <ChevronLeft size={20} />
           </button>
 
           <button
             onClick={next}
-            className="bg-white shadow-md p-3 rounded-full hover:bg-gray-200 cursor-pointer"
+            className="bg-white shadow-md p-3 rounded-full hover:bg-gray-200"
           >
             <ChevronRight size={20} />
           </button>

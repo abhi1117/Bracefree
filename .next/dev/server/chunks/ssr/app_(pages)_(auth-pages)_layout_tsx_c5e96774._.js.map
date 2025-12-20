@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/singh/Desktop/workly_web_provider/app/%28pages%29/%28auth-pages%29/layout.tsx"],"sourcesContent":["import OnBoardingImage from \"@/components/common/OnBoardingImage\";\r\n\r\nexport default function RootLayout({\r\n  children,\r\n}: {\r\n  children: React.ReactNode;\r\n}) {\r\n  return (\r\n    <div className=\"h-screen w-screen overflow-hidden flex flex-col \">\r\n      <div className=\"grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 overflow-hidden h-full\">\r\n        {/* Left Section */}\r\n\r\n        <div className=\"overflow-auto\">{children}</div>\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAEe,SAAS,WAAW,EACjC,QAAQ,EAGT;IACC,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAI,WAAU;sBAGb,cAAA,8OAAC;gBAAI,WAAU;0BAAiB;;;;;;;;;;;;;;;;AAIxC","debugId":null}}]
-}

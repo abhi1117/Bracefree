@@ -31,22 +31,35 @@ const data: Member[] = [
 
 export default function Team() {
   const [index, setIndex] = useState(0);
-  const [enableTransition, setEnableTransition] = useState(true);
+  const [cardsPerView, setCardsPerView] = useState(1);
 
   const pausedRef = useRef(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const isButtonAction = useRef(false);
 
   const total = data.length;
-  const CARD_WIDTH_PERCENT = 20; // 5 cards visible
   const TRANSITION_MS = 700;
+
+  /* ---------- RESPONSIVE CARD COUNT ---------- */
+  useEffect(() => {
+    const update = () => {
+      if (window.innerWidth >= 1024) setCardsPerView(5);
+      else if (window.innerWidth >= 640) setCardsPerView(2);
+      else setCardsPerView(1);
+    };
+
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  const CARD_WIDTH = 100 / cardsPerView;
 
   /* ---------- AUTO SCROLL ---------- */
   useEffect(() => {
     intervalRef.current = setInterval(() => {
-      if (pausedRef.current) return;
-      isButtonAction.current = false;
-      setIndex((prev) => prev + 1);
+      if (!pausedRef.current) {
+        setIndex((prev) => prev + 1);
+      }
     }, 3000);
 
     return () => {
@@ -54,84 +67,44 @@ export default function Team() {
     };
   }, []);
 
-  /* ---------- SEAMLESS LOOP RESET ---------- */
+  /* ---------- LOOP RESET ---------- */
   useEffect(() => {
-    if (index === total) {
-      // after animation finishes
-      setTimeout(() => {
-        setEnableTransition(false);
-        setIndex(0);
-      }, TRANSITION_MS);
+    if (index >= total) {
+      setTimeout(() => setIndex(0), TRANSITION_MS);
     }
   }, [index, total]);
 
-  /* ---------- RE-ENABLE TRANSITION ---------- */
-  useEffect(() => {
-    if (!enableTransition) {
-      requestAnimationFrame(() => {
-        setEnableTransition(true);
-      });
-    }
-  }, [enableTransition]);
-
-  /* ---------- CONTROLS (1 CARD ONLY) ---------- */
-  const next = () => {
-    isButtonAction.current = true;
-    setIndex((prev) => prev + 1);
-  };
-
-  const prev = () => {
-    isButtonAction.current = true;
-
-    if (index === 0) {
-      // jump to duplicated last card without animation
-      setEnableTransition(false);
-      setIndex(total - 1);
-      requestAnimationFrame(() => setEnableTransition(true));
-    } else {
-      setIndex((prev) => prev - 1);
-    }
-  };
+  const next = () => setIndex((prev) => prev + 1);
+  const prev = () => setIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
 
   return (
-    <section
-      id="team"
-      className="w-full max-w-full py-16 bg-[#f0f4f8] overflow-x-hidden"
-    >
+    <section id="team" className="w-full py-16 bg-[#f0f4f8] overflow-hidden">
       {/* Heading */}
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-extrabold">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
           Our Advisors
         </h2>
       </div>
 
       {/* Carousel */}
       <div
-        className="relative overflow-hidden px-6 md:px-16 box-border"
+        className="relative overflow-hidden px-4 sm:px-8 lg:px-16"
         onMouseEnter={() => (pausedRef.current = true)}
         onMouseLeave={() => (pausedRef.current = false)}
       >
         <div
-          className={`flex will-change-transform ${
-            enableTransition
-              ? "transition-transform duration-700 ease-in-out"
-              : ""
-          }`}
-          style={{ transform: `translateX(-${index * CARD_WIDTH_PERCENT}%)` }}
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${index * CARD_WIDTH}%)` }}
         >
           {[...data, ...data].map((m, i) => (
             <div
               key={`${m.id}-${i}`}
-              className="min-w-full sm:min-w-[50%] lg:min-w-[20%] px-3 box-border"
+              className="px-3"
+              style={{ minWidth: `${CARD_WIDTH}%` }}
             >
               <div className="bg-white border border-gray-200 rounded-xl shadow-md h-full">
-                <div className="relative h-[140px] w-full rounded-t-xl overflow-hidden bg-gray-50">
-                  <Image
-                    src={m.photo}
-                    alt={m.name}
-                    fill
-                    className="object-contain"
-                  />
+                <div className="relative h-[150px] w-full rounded-t-xl overflow-hidden bg-gray-50">
+                  <Image src={m.photo} alt={m.name} fill className="object-contain" />
                 </div>
 
                 <div className="p-3 text-center">
@@ -158,17 +131,10 @@ export default function Team() {
 
       {/* Controls */}
       <div className="flex justify-center gap-4 mt-8">
-        <button
-          onClick={prev}
-          className="bg-white shadow-md p-3 rounded-full hover:bg-gray-200 cursor-pointer"
-        >
+        <button onClick={prev} className="bg-white shadow-md p-3 rounded-full hover:bg-gray-200">
           <ChevronLeft size={20} />
         </button>
-
-        <button
-          onClick={next}
-          className="bg-white shadow-md p-3 rounded-full hover:bg-gray-200 cursor-pointer"
-        >
+        <button onClick={next} className="bg-white shadow-md p-3 rounded-full hover:bg-gray-200">
           <ChevronRight size={20} />
         </button>
       </div>

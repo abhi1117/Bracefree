@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/singh/Desktop/workly_web_provider%20-%20Copy/app/%28routes%29/dashboard/page.tsx"],"sourcesContent":["import DashboardWidgets from \"@/components/dashboard/DashboardWidgets\";\r\n\r\nexport default function DashboardPage() {\r\n  return <DashboardWidgets />;\r\n}\r\n"],"names":[],"mappings":";;;;;;;;;;;;AAEe,SAAS;IACtB,qBAAO,oOAAC;AACV"}}]
-}

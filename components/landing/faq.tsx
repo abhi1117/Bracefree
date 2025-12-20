@@ -39,51 +39,87 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="relative w-full py-16 bg-[#f9fbff] overflow-hidden position:center">
-
-      {/* subtle corner glow */}
+    <section
+      id="faq"
+      className="relative w-full py-12 sm:py-16 bg-[#f9fbff] overflow-hidden"
+    >
+      {/* subtle corner glow (desktop only) */}
       <motion.div
-        animate={{ opacity: [0.3, 0.5, 0.3] }}
+        animate={{ opacity: [0.25, 0.4, 0.25] }}
         transition={{ duration: 6, repeat: Infinity }}
-        className="absolute top-10 right-10 w-[250px] h-[250px] bg-blue-100/50 rounded-full blur-3xl "
+        className="
+          hidden sm:block
+          absolute top-10 right-10
+          w-[220px] h-[220px]
+          bg-blue-100/50
+          rounded-full
+          blur-3xl
+        "
       />
 
-      <div className="relative max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16">
 
-        {/* Left aligned title */}
+        {/* Title */}
         <motion.h2
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-gray-900 flex justify-center"
+          className="
+            text-center
+            text-[26px]
+            sm:text-[34px]
+            md:text-[42px]
+            font-bold
+            text-gray-900
+          "
         >
           Frequently Asked Questions
         </motion.h2>
 
         {/* FAQs */}
-        <div className="mt-12 space-y-4 ">
+        <div className="mt-8 sm:mt-12 space-y-3 sm:space-y-4">
           {faqs.map((item, index) => {
             const isOpen = openIndex === index;
 
             return (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all "
+                className="
+                  bg-white
+                  border border-gray-200
+                  rounded-xl
+                  shadow-sm
+                  hover:shadow-md
+                  transition-all
+                "
               >
-                {/* Question button */}
+                {/* Question */}
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex justify-between items-center px-5 py-4 text-left  cursor-pointer"
+                  className="
+                    w-full
+                    flex justify-between items-center
+                    px-4 sm:px-5
+                    py-4
+                    text-left
+                    cursor-pointer
+                  "
                 >
-                  <span className="text-lg font-medium text-gray-900">
+                  <span className="
+                    text-[15px]
+                    sm:text-[17px]
+                    font-medium
+                    text-gray-900
+                  ">
                     {item.q}
                   </span>
+
                   <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <ChevronDown size={22} className="text-gray-500" />
+                    <ChevronDown size={20} className="text-gray-500" />
                   </motion.div>
                 </button>
 
@@ -95,7 +131,14 @@ export default function FAQSection() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="px-5 pb-4 text-gray-700 text-[15px] leading-relaxed border-t border-gray-100"
+                      className="
+                        px-4 sm:px-5
+                        pb-4
+                        text-gray-700
+                        text-[14px] sm:text-[15px]
+                        leading-relaxed
+                        border-t border-gray-100
+                      "
                     >
                       {item.a}
                     </motion.div>
