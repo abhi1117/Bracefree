@@ -39,14 +39,13 @@ export default function Team() {
   const total = data.length;
   const TRANSITION_MS = 700;
 
-  /* ---------- RESPONSIVE CARD COUNT ---------- */
+  /* ---------- RESPONSIVE ---------- */
   useEffect(() => {
     const update = () => {
       if (window.innerWidth >= 1024) setCardsPerView(5);
       else if (window.innerWidth >= 640) setCardsPerView(2);
       else setCardsPerView(1);
     };
-
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
@@ -57,9 +56,7 @@ export default function Team() {
   /* ---------- AUTO SCROLL ---------- */
   useEffect(() => {
     intervalRef.current = setInterval(() => {
-      if (!pausedRef.current) {
-        setIndex((prev) => prev + 1);
-      }
+      if (!pausedRef.current) setIndex((prev) => prev + 1);
     }, 3000);
 
     return () => {
@@ -67,7 +64,7 @@ export default function Team() {
     };
   }, []);
 
-  /* ---------- LOOP RESET ---------- */
+  /* ---------- LOOP ---------- */
   useEffect(() => {
     if (index >= total) {
       setTimeout(() => setIndex(0), TRANSITION_MS);
@@ -78,24 +75,25 @@ export default function Team() {
   const prev = () => setIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
 
   return (
-    <section id="team" className="w-full py-16 bg-[#f0f4f8] overflow-hidden">
+    <section
+      id="team"
+      className="w-full py-16 overflow-hidden bg-[#f0f4f8] dark:bg-gray-900"
+    >
       {/* Heading */}
       <div className="text-center mb-10">
-          <h1
-            className="
-    text-center
-    text-[26px]
-    sm:text-[36px]
-    md:text-[44px]
-    font-bold
-    mb-4 sm:mb-6
-    tracking-tight
-    text-gray-900
-    dark:text-white
-  "
-          >
-        Our Advisors
-      </h1>
+        <h1
+          className="
+            text-[26px]
+            sm:text-[36px]
+            md:text-[44px]
+            font-bold
+            tracking-tight
+            text-gray-900
+            dark:text-white
+          "
+        >
+          Our Advisors
+        </h1>
       </div>
 
       {/* Carousel */}
@@ -114,14 +112,16 @@ export default function Team() {
               className="px-3"
               style={{ minWidth: `${CARD_WIDTH}%` }}
             >
-              <div className="bg-white border border-gray-200 rounded-xl shadow-md h-full">
-                <div className="relative h-[150px] w-full rounded-t-xl overflow-hidden bg-gray-50">
+              <div className="rounded-xl shadow-md h-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                <div className="relative h-[150px] w-full rounded-t-xl overflow-hidden bg-gray-50 dark:bg-gray-700">
                   <Image src={m.photo} alt={m.name} fill className="object-contain" />
                 </div>
 
                 <div className="p-3 text-center">
                   <div className="flex justify-center items-center gap-2 mb-1">
-                    <h3 className="font-semibold text-sm">{m.name}</h3>
+                    <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
+                      {m.name}
+                    </h3>
                     {m.linkedin && (
                       <a
                         href={m.linkedin}
@@ -133,7 +133,9 @@ export default function Team() {
                       </a>
                     )}
                   </div>
-                  <p className="text-xs italic text-gray-500">{m.role}</p>
+                  <p className="text-xs italic text-gray-500 dark:text-gray-300">
+                    {m.role}
+                  </p>
                 </div>
               </div>
             </div>
@@ -143,10 +145,10 @@ export default function Team() {
 
       {/* Controls */}
       <div className="flex justify-center gap-4 mt-8">
-        <button onClick={prev} className="bg-white shadow-md p-3 rounded-full hover:bg-gray-200">
+        <button className="bg-white dark:bg-gray-800 dark:text-white shadow-md p-3 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
           <ChevronLeft size={20} />
         </button>
-        <button onClick={next} className="bg-white shadow-md p-3 rounded-full hover:bg-gray-200">
+        <button className="bg-white dark:bg-gray-800 dark:text-white shadow-md p-3 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
           <ChevronRight size={20} />
         </button>
       </div>
