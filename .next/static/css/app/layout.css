@@ -1918,9 +1918,9 @@
       font-size: 52px;
     }
   }
-  .dark\:text-white {
+  .dark\:text-black {
     @media (prefers-color-scheme: dark) {
-      color: var(--color-white);
+      color: var(--color-black);
     }
   }
 }

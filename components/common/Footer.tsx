@@ -89,28 +89,36 @@ export default function Footer() {
             </a>
 
             {/* Instagram */}
-            <a
-              href="https://www.instagram.com/bracefree.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24">
-                <defs>
-                  <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#F58529" />
-                    <stop offset="30%" stopColor="#DD2A7B" />
-                    <stop offset="60%" stopColor="#8134AF" />
-                    <stop offset="100%" stopColor="#515BD4" />
-                  </linearGradient>
-                </defs>
-                <path
-                  fill="url(#igGradient)"
-                  d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7z"
-                />
-              </svg>
-            </a>
+          <a
+  href="https://www.instagram.com/bracefree.in"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Instagram"
+  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
+>
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#f58529" />
+        <stop offset="30%" stopColor="#dd2a7b" />
+        <stop offset="60%" stopColor="#8134af" />
+        <stop offset="100%" stopColor="#515bd4" />
+      </linearGradient>
+    </defs>
+
+    <rect x="0" y="0" width="24" height="24" rx="6" fill="url(#igGradient)" />
+    <path
+      d="M12 7.2a4.8 4.8 0 100 9.6 4.8 4.8 0 000-9.6zm0 7.8a3 3 0 110-6 3 3 0 010 6zm5.1-7.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"
+      fill="#fff"
+    />
+  </svg>
+</a>
+
           </div>
         </div>
 
