@@ -7,7 +7,6 @@ interface Testimonial {
   name: string;
   message: string;
 }
-
 const testimonials: Testimonial[] = [
   { name: "Rahul Mehta", message: "Very comfortable and almost invisible aligners. Great results and a smooth experience with BraceFree." },
   { name: "Neha Sharma", message: "Clear treatment plan and excellent outcome. BraceFree made my smile journey easy and stress-free." },
@@ -97,9 +96,20 @@ export default function Testimonials() {
 
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h1
+            className="
+          text-center
+          text-[26px]
+          sm:text-[36px]
+          md:text-[44px]
+          font-bold
+          mb-4 sm:mb-6
+          tracking-tight
+        "
+          >
             What Our Patients Say
-          </h2>
+          </h1>
+
           <p className="mt-3 text-gray-600">
             Real experiences from people who transformed their smiles with BraceFree
           </p>

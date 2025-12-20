@@ -70,9 +70,19 @@ export default function VisionSection() {
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
             className="text-gray-700"
           >
-<h2 className="mb-6 sm:mb-8 text-3xl sm:text-4xl md:text-[48px] font-semibold text-gray-900 flex items-center justify-center text-center">
-  Our Vision
-</h2>
+      <h1
+        className="
+          text-center
+          text-[26px]
+          sm:text-[36px]
+          md:text-[44px]
+          font-bold
+          mb-4 sm:mb-6
+          tracking-tight
+        "
+      >
+        Our Vision
+      </h1>
 
 
             {/* Accent + subtitle */}

@@ -81,9 +81,19 @@ export default function Team() {
     <section id="team" className="w-full py-16 bg-[#f0f4f8] overflow-hidden">
       {/* Heading */}
       <div className="text-center mb-10">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
-          Our Advisors
-        </h2>
+      <h1
+        className="
+          text-center
+          text-[26px]
+          sm:text-[36px]
+          md:text-[44px]
+          font-bold
+          mb-4 sm:mb-6
+          tracking-tight
+        "
+      >
+        Our Advisors
+      </h1>
       </div>
 
       {/* Carousel */}
