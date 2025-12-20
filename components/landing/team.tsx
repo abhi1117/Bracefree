@@ -81,19 +81,20 @@ export default function Team() {
     >
       {/* Heading */}
       <div className="text-center mb-10">
-        <h1
-          className="
-            text-[26px]
-            sm:text-[36px]
-            md:text-[44px]
-            font-bold
-            tracking-tight
-            text-gray-900
-            dark:text-white
-          "
-        >
-          Our Advisors
-        </h1>
+<h1
+  className="
+    text-[26px]
+    sm:text-[36px]
+    md:text-[44px]
+    font-bold
+    tracking-tight
+    text-gray-900
+    dark:text-gray-200
+  "
+>
+  Our Advisors
+</h1>
+
       </div>
 
       {/* Carousel */}
@@ -119,7 +120,8 @@ export default function Team() {
 
                 <div className="p-3 text-center">
                   <div className="flex justify-center items-center gap-2 mb-1">
-                    <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
+<h3 className="font-semibold text-sm text-gray-900 dark:text-gray-200">
+
                       {m.name}
                     </h3>
                     {m.linkedin && (
