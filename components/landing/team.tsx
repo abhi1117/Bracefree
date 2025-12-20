@@ -81,17 +81,19 @@ export default function Team() {
     <section id="team" className="w-full py-16 bg-[#f0f4f8] overflow-hidden">
       {/* Heading */}
       <div className="text-center mb-10">
-      <h1
-        className="
-          text-center
-          text-[26px]
-          sm:text-[36px]
-          md:text-[44px]
-          font-bold
-          mb-4 sm:mb-6
-          tracking-tight
-        "
-      >
+          <h1
+            className="
+    text-center
+    text-[26px]
+    sm:text-[36px]
+    md:text-[44px]
+    font-bold
+    mb-4 sm:mb-6
+    tracking-tight
+    text-gray-900
+    dark:text-white
+  "
+          >
         Our Advisors
       </h1>
       </div>

@@ -97,14 +97,16 @@ export default function Testimonials() {
         <div className="text-center mb-12">
           <h1
             className="
-          text-center
-          text-[26px]
-          sm:text-[36px]
-          md:text-[44px]
-          font-bold
-          mb-4 sm:mb-6
-          tracking-tight
-        "
+    text-center
+    text-[26px]
+    sm:text-[36px]
+    md:text-[44px]
+    font-bold
+    mb-4 sm:mb-6
+    tracking-tight
+    text-gray-900
+    dark:text-white
+  "
           >
             What Our Patients Say
           </h1>
