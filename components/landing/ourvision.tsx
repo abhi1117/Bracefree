@@ -37,7 +37,6 @@ export default function VisionSection() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 md:px-12 lg:px-16">
         {/* Layout */}
         <div className="grid items-start gap-10 sm:gap-12 lg:grid-cols-[1.1fr_1.3fr] lg:gap-16">
-
           {/* LEFT IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -114,7 +113,6 @@ export default function VisionSection() {
               care is not just a service.
             </p>
           </motion.div>
-
         </div>
       </div>
     </section>

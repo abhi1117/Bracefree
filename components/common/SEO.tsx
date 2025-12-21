@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 
 interface SEOProps {
   title: string;
@@ -7,7 +7,12 @@ interface SEOProps {
   image?: string;
 }
 
-export default function SEO({ title, description, url = 'https://yourdomain.com/', image = 'https://yourdomain.com/images/og-image.jpg' }: SEOProps) {
+export default function SEO({
+  title,
+  description,
+  url = "https://yourdomain.com/",
+  image = "https://yourdomain.com/images/og-image.jpg",
+}: SEOProps) {
   return (
     <Head>
       <title>{title}</title>

@@ -82,7 +82,6 @@ export default function GettingStartedServices() {
                 {step.desc}
               </p>
             </motion.div>
-            
           ))}
         </div>
       </div>

@@ -28,10 +28,10 @@ export default function Features() {
           Flexible Work, At Your Fingertips
         </h2>
 
-        <p
-          className="text-center text-[14px] font-normal leading-relaxed text-[var(--color-text-secondary)] max-w-[700px] mx-auto mb-12"
-        >
-          Find local jobs that match your skills and availability. With Workly, you have the freedom to choose your schedule and build your income — your way.
+        <p className="text-center text-[14px] font-normal leading-relaxed text-[var(--color-text-secondary)] max-w-[700px] mx-auto mb-12">
+          Find local jobs that match your skills and availability. With Workly,
+          you have the freedom to choose your schedule and build your income —
+          your way.
         </p>
 
         {/* ✅ Feature Boxes */}

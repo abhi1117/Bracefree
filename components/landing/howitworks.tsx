@@ -2,10 +2,7 @@ import Image from "next/image";
 
 export default function HowItWorks() {
   return (
-    <section
-      id="howitworks"
-      className="w-full mt-6 bg-white"
-    >
+    <section id="howitworks" className="w-full mt-6 bg-white">
       {/* Heading */}
       <h1
         className="

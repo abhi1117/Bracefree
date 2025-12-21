@@ -13,8 +13,18 @@ interface Member {
 }
 
 const data: Member[] = [
-  { id: 1, photo: "/team/sachin.jpg", name: "Dr. Sachin Ahuja", role: "BDS, MDS (Orthodontics)" },
-  { id: 2, photo: "/team/ankit2.jpg", name: "Dr. Ankit Goyal", role: "BDS, MDS (Orthodontics)" },
+  {
+    id: 1,
+    photo: "/team/sachin.jpg",
+    name: "Dr. Sachin Ahuja",
+    role: "BDS, MDS (Orthodontics)",
+  },
+  {
+    id: 2,
+    photo: "/team/ankit2.jpg",
+    name: "Dr. Ankit Goyal",
+    role: "BDS, MDS (Orthodontics)",
+  },
   {
     id: 3,
     photo: "/team/himanshu.jpg",
@@ -22,11 +32,36 @@ const data: Member[] = [
     role: "Scientific Consultant – BDS, MDS, MSc Oral Sciences",
     linkedin: "https://www.linkedin.com/in/hkalia1/",
   },
-  { id: 4, photo: "/team/meenal.jpg", name: "Dr. Meenal Ahuja", role: "Clinical Expert – Endodontics" },
-  { id: 5, photo: "/team/arzoo2.jpg", name: "Dr. Arzoo Goyal", role: "Oral & Maxillofacial Surgery" },
-  { id: 6, photo: "/team/vishal.jpg", name: "Mr. Vishal Kalia", role: "Business Development Consultant" },
-  { id: 7, photo: "/team/savita.jpg", name: "Ms. Savita Sharma", role: "Outreach & Strategic Development" },
-  { id: 8, photo: "/team/francesco.jpg", name: "Mr. Francesco Pra Mio", role: "Investor and Advisor" },
+  {
+    id: 4,
+    photo: "/team/meenal.jpg",
+    name: "Dr. Meenal Ahuja",
+    role: "Clinical Expert – Endodontics",
+  },
+  {
+    id: 5,
+    photo: "/team/arzoo2.jpg",
+    name: "Dr. Arzoo Goyal",
+    role: "Oral & Maxillofacial Surgery",
+  },
+  {
+    id: 6,
+    photo: "/team/vishal.jpg",
+    name: "Mr. Vishal Kalia",
+    role: "Business Development Consultant",
+  },
+  {
+    id: 7,
+    photo: "/team/savita.jpg",
+    name: "Ms. Savita Sharma",
+    role: "Outreach & Strategic Development",
+  },
+  {
+    id: 8,
+    photo: "/team/francesco.jpg",
+    name: "Mr. Francesco Pra Mio",
+    role: "Investor and Advisor",
+  },
 ];
 
 export default function Team() {
@@ -78,10 +113,7 @@ export default function Team() {
   const prev = () => setIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
 
   return (
-    <section
-      id="team"
-      className="w-full py-16 bg-white overflow-hidden"
-    >
+    <section id="team" className="w-full py-16 bg-white overflow-hidden">
       {/* Heading */}
       <div className="text-center mb-10">
         <h1
@@ -118,7 +150,12 @@ export default function Team() {
             >
               <div className="bg-white border border-gray-200 rounded-xl shadow-md h-full">
                 <div className="relative h-[150px] w-full rounded-t-xl overflow-hidden bg-gray-50">
-                  <Image src={m.photo} alt={m.name} fill className="object-contain" />
+                  <Image
+                    src={m.photo}
+                    alt={m.name}
+                    fill
+                    className="object-contain"
+                  />
                 </div>
 
                 <div className="p-3 text-center">
@@ -139,9 +176,7 @@ export default function Team() {
                     )}
                   </div>
 
-                  <p className="text-xs italic text-gray-500">
-                    {m.role}
-                  </p>
+                  <p className="text-xs italic text-gray-500">{m.role}</p>
                 </div>
               </div>
             </div>

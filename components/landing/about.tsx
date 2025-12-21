@@ -32,9 +32,11 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="w-full bg-white py-16 sm:py-20 overflow-hidden">
+    <section
+      id="about"
+      className="w-full bg-white py-16 sm:py-20 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-
         {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,7 +58,6 @@ export default function AboutSection() {
 
         {/* MAIN GRID */}
         <div className="relative grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-14 items-start">
-
           {/* FEATURES */}
           <div className="grid sm:grid-cols-2 gap-5 sm:gap-6 relative z-10">
             {features.map((item, index) => (

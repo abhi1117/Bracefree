@@ -2,10 +2,7 @@ import Image from "next/image";
 
 export default function Doyouhave() {
   return (
-    <section
-      id="doyouhave"
-      className="w-full bg-white"
-    >
+    <section id="doyouhave" className="w-full bg-white">
       {/* Heading */}
       <h1
         className="

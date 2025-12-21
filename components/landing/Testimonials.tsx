@@ -8,15 +8,51 @@ interface Testimonial {
   message: string;
 }
 const testimonials: Testimonial[] = [
-  { name: "Rahul Mehta", message: "Very comfortable and almost invisible aligners. Great results and a smooth experience with BraceFree." },
-  { name: "Neha Sharma", message: "Clear treatment plan and excellent outcome. BraceFree made my smile journey easy and stress-free." },
-  { name: "Amit Verma", message: "Perfect for busy schedules. Discreet, comfortable, and effective. Highly recommend BraceFree." },
-  { name: "Pooja Khanna", message: "My front teeth gap closed beautifully. Simple process and amazing results." },
-  { name: "Sandeep Arora", message: "No wires, no pain, no irritation. Exactly what I was looking for in aligner treatment." },
-  { name: "Ritika Malhotra", message: "Comfortable aligners and visible improvement in weeks. My confidence has increased." },
-  { name: "Vikas Jain", message: "People didn’t even notice I was wearing aligners. Very happy with the final smile." },
-  { name: "Ananya Gupta", message: "The digital smile plan gave me full confidence. Professional and reliable treatment." },
-  { name: "Karan Singh", message: "Excellent service from consultation to finish. BraceFree delivers what it promises." },
+  {
+    name: "Rahul Mehta",
+    message:
+      "Very comfortable and almost invisible aligners. Great results and a smooth experience with BraceFree.",
+  },
+  {
+    name: "Neha Sharma",
+    message:
+      "Clear treatment plan and excellent outcome. BraceFree made my smile journey easy and stress-free.",
+  },
+  {
+    name: "Amit Verma",
+    message:
+      "Perfect for busy schedules. Discreet, comfortable, and effective. Highly recommend BraceFree.",
+  },
+  {
+    name: "Pooja Khanna",
+    message:
+      "My front teeth gap closed beautifully. Simple process and amazing results.",
+  },
+  {
+    name: "Sandeep Arora",
+    message:
+      "No wires, no pain, no irritation. Exactly what I was looking for in aligner treatment.",
+  },
+  {
+    name: "Ritika Malhotra",
+    message:
+      "Comfortable aligners and visible improvement in weeks. My confidence has increased.",
+  },
+  {
+    name: "Vikas Jain",
+    message:
+      "People didn’t even notice I was wearing aligners. Very happy with the final smile.",
+  },
+  {
+    name: "Ananya Gupta",
+    message:
+      "The digital smile plan gave me full confidence. Professional and reliable treatment.",
+  },
+  {
+    name: "Karan Singh",
+    message:
+      "Excellent service from consultation to finish. BraceFree delivers what it promises.",
+  },
 ];
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
@@ -92,11 +128,10 @@ export default function Testimonials() {
       className="w-full py-20 bg-[#f0f4f8] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4">
-
         {/* Heading */}
         <div className="text-center mb-12">
-<h1
-  className="
+          <h1
+            className="
     text-center
     text-[26px]
     sm:text-[36px]
@@ -107,13 +142,13 @@ export default function Testimonials() {
     text-gray-900
     dark:text-black
   "
->
-  What Our Patients Say
-</h1>
-
+          >
+            What Our Patients Say
+          </h1>
 
           <p className="mt-3 text-gray-600">
-            Real experiences from people who transformed their smiles with BraceFree
+            Real experiences from people who transformed their smiles with
+            BraceFree
           </p>
         </div>
 

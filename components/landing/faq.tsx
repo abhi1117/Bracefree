@@ -8,32 +8,32 @@ export default function FAQSection() {
   const faqs = [
     {
       q: "What makes BraceFree different from other clear aligners in India?",
-      a: "BraceFree is one of the few brands where all treatment planning is done only by orthodontists, ensuring safer and clinically accurate tooth movement."
+      a: "BraceFree is one of the few brands where all treatment planning is done only by orthodontists, ensuring safer and clinically accurate tooth movement.",
     },
     {
       q: "Are BraceFree aligners comfortable to wear?",
-      a: "Yes. BraceFree aligners are made from high-quality, biocompatible plastic with smooth edges. Most patients adapt within 1–2 days."
+      a: "Yes. BraceFree aligners are made from high-quality, biocompatible plastic with smooth edges. Most patients adapt within 1–2 days.",
     },
     {
       q: "How long does BraceFree treatment take?",
-      a: "Depending on the case, treatment ranges from 3 to 18 months. Your orthodontist will give a personalized timeline after evaluation."
+      a: "Depending on the case, treatment ranges from 3 to 18 months. Your orthodontist will give a personalized timeline after evaluation.",
     },
     {
       q: "Can I eat or drink with BraceFree aligners on?",
-      a: "Only drink water. For food or other drinks, remove aligners to prevent staining or warping."
+      a: "Only drink water. For food or other drinks, remove aligners to prevent staining or warping.",
     },
     {
       q: "How does BraceFree compare to Invisalign?",
-      a: "BraceFree uses material and planning protocols comparable to leading global brands — but at a more accessible price for Indian patients."
+      a: "BraceFree uses material and planning protocols comparable to leading global brands — but at a more accessible price for Indian patients.",
     },
     {
       q: "Who designs my treatment plan?",
-      a: "Certified orthodontists exclusively design, review, and approve your complete treatment plan."
+      a: "Certified orthodontists exclusively design, review, and approve your complete treatment plan.",
     },
     {
       q: "How do I begin BraceFree treatment?",
-      a: "Contact us at hello@BraceFree.in or visit a partner clinic. We’ll guide you through assessment, scans, and aligner delivery."
-    }
+      a: "Contact us at hello@BraceFree.in or visit a partner clinic. We’ll guide you through assessment, scans, and aligner delivery.",
+    },
   ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -58,7 +58,6 @@ export default function FAQSection() {
       />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16">
-
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 10 }}
@@ -106,12 +105,14 @@ export default function FAQSection() {
                     cursor-pointer
                   "
                 >
-                  <span className="
+                  <span
+                    className="
                     text-[15px]
                     sm:text-[17px]
                     font-medium
                     text-gray-900
-                  ">
+                  "
+                  >
                     {item.q}
                   </span>
 
@@ -148,7 +149,6 @@ export default function FAQSection() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

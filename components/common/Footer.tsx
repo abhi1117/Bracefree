@@ -2,27 +2,29 @@
 
 export default function Footer() {
   return (
-    <footer className="
+    <footer
+      className="
       relative w-full
       bg-[#0f0f11] text-white
       pt-12 sm:pt-16
       pb-8 sm:pb-10
       px-4 sm:px-6 md:px-10
       overflow-hidden
-    ">
-
+    "
+    >
       {/* Soft top gradient */}
       <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-black/20 pointer-events-none" />
 
-      <div className="
+      <div
+        className="
         relative z-20
         max-w-7xl mx-auto
         grid grid-cols-1
         sm:grid-cols-2
         md:grid-cols-4
         gap-8 md:gap-10
-      ">
-
+      "
+      >
         {/* Logo + Description */}
         <div className="text-center sm:text-left">
           <div className="flex items-center justify-center sm:justify-start gap-2 mb-3">
@@ -54,10 +56,26 @@ export default function Footer() {
         <div className="text-center sm:text-left">
           <h4 className="text-lg font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-2 text-gray-300 text-sm">
-            <li><a href="#home" className="hover:text-blue-400 transition">Home</a></li>
-            <li><a href="#about" className="hover:text-blue-400 transition">About</a></li>
-            <li><a href="#vision" className="hover:text-blue-400 transition">Our Vision</a></li>
-            <li><a href="#faq" className="hover:text-blue-400 transition">FAQs</a></li>
+            <li>
+              <a href="#home" className="hover:text-blue-400 transition">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="hover:text-blue-400 transition">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#vision" className="hover:text-blue-400 transition">
+                Our Vision
+              </a>
+            </li>
+            <li>
+              <a href="#faq" className="hover:text-blue-400 transition">
+                FAQs
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -65,7 +83,6 @@ export default function Footer() {
         <div className="text-center sm:text-left">
           <h4 className="text-lg font-semibold mb-3">Social Media</h4>
           <div className="flex justify-center sm:justify-start gap-4">
-
             {/* Facebook */}
             <a
               href="#"
@@ -103,7 +120,13 @@ export default function Footer() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <defs>
-                  <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <linearGradient
+                    id="igGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
                     <stop offset="0%" stopColor="#f58529" />
                     <stop offset="30%" stopColor="#dd2a7b" />
                     <stop offset="60%" stopColor="#8134af" />
@@ -111,7 +134,14 @@ export default function Footer() {
                   </linearGradient>
                 </defs>
 
-                <rect x="0" y="0" width="24" height="24" rx="6" fill="url(#igGradient)" />
+                <rect
+                  x="0"
+                  y="0"
+                  width="24"
+                  height="24"
+                  rx="6"
+                  fill="url(#igGradient)"
+                />
                 <path
                   d="M12 7.2a4.8 4.8 0 100 9.6 4.8 4.8 0 000-9.6zm0 7.8a3 3 0 110-6 3 3 0 010 6zm5.1-7.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"
                   fill="#fff"
@@ -126,7 +156,10 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-3">Reach Out To Us</h4>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li>
-              <a href="mailto:contact@bracefree.in" className="hover:text-blue-400 transition">
+              <a
+                href="mailto:contact@bracefree.in"
+                className="hover:text-blue-400 transition"
+              >
                 contact@bracefree.in
               </a>
             </li>
@@ -147,7 +180,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="
+      <div
+        className="
         relative z-20
         border-t border-white/10
         mt-10 sm:mt-12
@@ -155,7 +189,8 @@ export default function Footer() {
         text-center
         text-gray-500
         text-xs sm:text-sm
-      ">
+      "
+      >
         © {new Date().getFullYear()} BraceFree™. All rights reserved.
       </div>
     </footer>

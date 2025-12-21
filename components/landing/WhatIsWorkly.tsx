@@ -43,8 +43,8 @@ export default function WhatIsWorkly() {
             <p className="text-[16px] md:text-[15px] leading-relaxed font-normal text-[var(--color-text-secondary)]">
               Workly helps people find reliable local experts for anything from
               home repairs to everyday tasks. As a service provider, you can
-              earn on your own schedule, doing the work you’re skilled at — while
-              helping someone in your community get things done faster.
+              earn on your own schedule, doing the work you’re skilled at —
+              while helping someone in your community get things done faster.
             </p>
           </div>
         </div>

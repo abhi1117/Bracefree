@@ -98,13 +98,12 @@ export default function Navbar() {
   return (
     <>
       {/* NAVBAR */}
-<nav className="absolute top-0 left-0 right-0 z-30 w-full
+      <nav
+        className="absolute top-0 left-0 right-0 z-30 w-full
 
-">
-
-
+"
+      >
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 md:px-10 py-4 md:py-6 flex flex-col md:flex-row md:justify-between md:items-center">
-
           {/* LOGO + HAMBURGER */}
           <div className="flex w-full md:w-auto justify-between items-center">
             <button
@@ -143,15 +142,19 @@ export default function Navbar() {
                 strokeWidth="2"
                 viewBox="0 0 24 24"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
 
           {/* MENU */}
-<div
-  ref={menuRef}
-  className={`absolute md:static
+          <div
+            ref={menuRef}
+            className={`absolute md:static
     top-full left-0 right-0
     flex-col md:flex-row md:flex gap-4 sm:gap-6 md:gap-10
     text-white text-base md:text-lg font-medium tracking-wide
@@ -161,8 +164,7 @@ export default function Navbar() {
     mt-2 md:mt-0
     transition-all duration-300
     ${open ? "flex" : "hidden"} md:flex`}
->
-
+          >
             {navLinks.map((link) => (
               <button
                 key={link.id}

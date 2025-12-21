@@ -57,7 +57,9 @@ export default function HeroSection() {
             Welcome to
             <br />
             Smileverse Dentech
-            <span className="align-super text-[13px] sm:text-[18px] ml-1">™</span>
+            <span className="align-super text-[13px] sm:text-[18px] ml-1">
+              ™
+            </span>
           </h1>
 
           {/* Description */}
@@ -70,7 +72,8 @@ export default function HeroSection() {
               mb-3 sm:mb-4
             "
           >
-            We're committed to transforming India's dental care landscape through technology, expertise, and precision.
+            We're committed to transforming India's dental care landscape
+            through technology, expertise, and precision.
           </p>
 
           <p
@@ -83,7 +86,8 @@ export default function HeroSection() {
             "
           >
             As the demand for expert orthodontic care rises, we created{" "}
-            <span className="font-semibold">BraceFree</span> — our flagship clear aligner system built for safety, accuracy, and affordability.
+            <span className="font-semibold">BraceFree</span> — our flagship
+            clear aligner system built for safety, accuracy, and affordability.
           </p>
 
           <p
@@ -95,7 +99,8 @@ export default function HeroSection() {
               mb-6 sm:mb-7
             "
           >
-            BraceFree marks the first chapter in building a complete, cost-effective ecosystem of advanced dental innovation.
+            BraceFree marks the first chapter in building a complete,
+            cost-effective ecosystem of advanced dental innovation.
           </p>
 
           {/* CTA */}
@@ -135,7 +140,6 @@ export default function HeroSection() {
         >
           N
         </div>
-      
       </div>
     </section>
   );
