@@ -7,9 +7,9 @@ export default function VisionSection() {
   return (
     <section
       id="vision"
-      className="relative w-full overflow-hidden pt-6 sm:pt-8 pb-6 sm:pb-8"
+      className="relative w-full overflow-hidden pt-6 sm:pt-8 pb-6 sm:pb-8 bg-white"
     >
-      {/* ===== Ultra-soft studio background ===== */}
+      {/* ===== Ultra-soft studio background (kept light for dark mode too) ===== */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -39,28 +39,27 @@ export default function VisionSection() {
         <div className="grid items-start gap-10 sm:gap-12 lg:grid-cols-[1.1fr_1.3fr] lg:gap-16">
 
           {/* LEFT IMAGE */}
- <motion.div
-  initial={{ opacity: 0, x: -30 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.7, ease: "easeOut" }}
-  className="
-    relative w-full
-    h-[360px]
-    sm:h-[420px]
-    md:h-[560px]
-    lg:h-[620px]
-  "
->
-  <Image
-    src="/About4.png"
-    alt="BraceFree Aligners Case"
-    fill
-    priority
-    className="object-contain object-center lg:object-left scale-[1.05]"
-  />
-</motion.div>
-
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="
+              relative w-full
+              h-[360px]
+              sm:h-[420px]
+              md:h-[560px]
+              lg:h-[620px]
+            "
+          >
+            <Image
+              src="/About4.png"
+              alt="BraceFree Aligners Case"
+              fill
+              priority
+              className="object-contain object-center lg:object-left scale-[1.05]"
+            />
+          </motion.div>
 
           {/* RIGHT CONTENT */}
           <motion.div
@@ -68,33 +67,34 @@ export default function VisionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-            className="text-gray-700"
+            className="text-gray-700 dark:text-gray-700"
           >
-      <h1
-        className="
-          text-center
-          text-[26px]
-          sm:text-[36px]
-          md:text-[44px]
-          font-bold
-          mb-4 sm:mb-6
-          tracking-tight
-        "
-      >
-        Our Vision
-      </h1>
-
+            <h1
+              className="
+                text-center
+                text-[26px]
+                sm:text-[36px]
+                md:text-[44px]
+                font-bold
+                mb-4 sm:mb-6
+                tracking-tight
+                text-gray-900
+                dark:text-gray-900
+              "
+            >
+              Our Vision
+            </h1>
 
             {/* Accent + subtitle */}
             <div className="mb-6 sm:mb-8 flex items-start gap-4">
               <span className="mt-1 h-12 sm:h-14 w-[3px] rounded-full bg-blue-600" />
-              <p className="text-[15px] sm:text-[17px] font-medium leading-snug text-gray-900">
+              <p className="text-[15px] sm:text-[17px] font-medium leading-snug text-gray-900 dark:text-gray-900">
                 Redefining the future of dentistry with precision, innovation,
                 and accessibility.
               </p>
             </div>
 
-            <p className="mb-5 sm:mb-6 text-[14px] sm:text-[16px] leading-relaxed">
+            <p className="mb-5 sm:mb-6 text-[14px] sm:text-[16px] leading-relaxed text-gray-700 dark:text-gray-700">
               At Smileverse Dentech, we envision an India where every person
               regardless of location or background — can access advanced,
               high-quality dental care with ease. Our mission is to eliminate
@@ -105,7 +105,7 @@ export default function VisionSection() {
               patient-centric.
             </p>
 
-            <p className="text-[14px] sm:text-[16px] leading-relaxed">
+            <p className="text-[14px] sm:text-[16px] leading-relaxed text-gray-700 dark:text-gray-700">
               BraceFree marks the beginning of this transformation, a commitment
               to modernize Orthodontics by offering solutions that are smarter,
               faster, and built around real human needs. With continuous

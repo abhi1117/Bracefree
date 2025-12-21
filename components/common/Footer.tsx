@@ -10,7 +10,7 @@ export default function Footer() {
       px-4 sm:px-6 md:px-10
       overflow-hidden
     ">
-      
+
       {/* Soft top gradient */}
       <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-black/20 pointer-events-none" />
 
@@ -84,41 +84,40 @@ export default function Footer() {
               className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="#FF0000">
-                <path d="M23.498 6.186a2.958 2.958 0 00-2.08-2.093C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.418.593A2.958 2.958 0 00.502 6.186 30.114 30.114 0 000 12a30.114 30.114 0 00.502 5.814 2.958 2.958 0 002.08 2.093C4.495 20.5 12 20.5 12 20.5s7.505 0 9.418-.593a2.958 2.958 0 002.08-2.093A30.114 30.114 0 0024 12a30.114 30.114 0 00-.502-5.814zM9.75 15.5v-7l6 3.5-6 3.5z"/>
+                <path d="M23.498 6.186a2.958 2.958 0 00-2.08-2.093C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.418.593A2.958 2.958 0 00.502 6.186 30.114 30.114 0 000 12a30.114 30.114 0 00.502 5.814 2.958 2.958 0 002.08 2.093C4.495 20.5 12 20.5 12 20.5s7.505 0 9.418-.593a2.958 2.958 0 002.08-2.093A30.114 30.114 0 0024 12a30.114 30.114 0 00-.502-5.814zM9.75 15.5v-7l6 3.5-6 3.5z" />
               </svg>
             </a>
 
             {/* Instagram */}
-          <a
-  href="https://www.instagram.com/bracefree.in"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Instagram"
-  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
->
-  <svg
-    width="18"
-    height="18"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <defs>
-      <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#f58529" />
-        <stop offset="30%" stopColor="#dd2a7b" />
-        <stop offset="60%" stopColor="#8134af" />
-        <stop offset="100%" stopColor="#515bd4" />
-      </linearGradient>
-    </defs>
+            <a
+              href="https://www.instagram.com/bracefree.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#f58529" />
+                    <stop offset="30%" stopColor="#dd2a7b" />
+                    <stop offset="60%" stopColor="#8134af" />
+                    <stop offset="100%" stopColor="#515bd4" />
+                  </linearGradient>
+                </defs>
 
-    <rect x="0" y="0" width="24" height="24" rx="6" fill="url(#igGradient)" />
-    <path
-      d="M12 7.2a4.8 4.8 0 100 9.6 4.8 4.8 0 000-9.6zm0 7.8a3 3 0 110-6 3 3 0 010 6zm5.1-7.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"
-      fill="#fff"
-    />
-  </svg>
-</a>
-
+                <rect x="0" y="0" width="24" height="24" rx="6" fill="url(#igGradient)" />
+                <path
+                  d="M12 7.2a4.8 4.8 0 100 9.6 4.8 4.8 0 000-9.6zm0 7.8a3 3 0 110-6 3 3 0 010 6zm5.1-7.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"
+                  fill="#fff"
+                />
+              </svg>
+            </a>
           </div>
         </div>
 

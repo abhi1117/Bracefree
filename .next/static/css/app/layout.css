@@ -656,9 +656,6 @@
   .table {
     display: table;
   }
-  .aspect-\[4\/3\] {
-    aspect-ratio: 4/3;
-  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -694,6 +691,9 @@
   }
   .h-\[780px\] {
     height: 780px;
+  }
+  .h-auto {
+    height: auto;
   }
   .h-full {
     height: 100%;
@@ -912,6 +912,9 @@
   }
   .border-gray-200 {
     border-color: var(--color-gray-200);
+  }
+  .border-gray-300 {
+    border-color: var(--color-gray-300);
   }
   .border-white\/10 {
     border-color: color-mix(in srgb, #fff 10%, transparent);
@@ -1350,6 +1353,13 @@
       }
     }
   }
+  .hover\:bg-gray-100 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-100);
+      }
+    }
+  }
   .hover\:bg-gray-200 {
     &:hover {
       @media (hover: hover) {
@@ -1452,11 +1462,6 @@
       margin-top: calc(var(--spacing) * 16);
     }
   }
-  .sm\:mb-5 {
-    @media (width >= 40rem) {
-      margin-bottom: calc(var(--spacing) * 5);
-    }
-  }
   .sm\:mb-6 {
     @media (width >= 40rem) {
       margin-bottom: calc(var(--spacing) * 6);
@@ -1475,11 +1480,6 @@
   .sm\:block {
     @media (width >= 40rem) {
       display: block;
-    }
-  }
-  .sm\:aspect-\[16\/9\] {
-    @media (width >= 40rem) {
-      aspect-ratio: 16/9;
     }
   }
   .sm\:h-11 {
@@ -1549,6 +1549,11 @@
         margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
         margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
       }
+    }
+  }
+  .sm\:rounded-3xl {
+    @media (width >= 40rem) {
+      border-radius: var(--radius-3xl);
     }
   }
   .sm\:p-6 {
@@ -1848,16 +1853,6 @@
       display: block;
     }
   }
-  .lg\:aspect-\[16\/6\] {
-    @media (width >= 64rem) {
-      aspect-ratio: 16/6;
-    }
-  }
-  .lg\:aspect-\[16\/7\] {
-    @media (width >= 64rem) {
-      aspect-ratio: 16/7;
-    }
-  }
   .lg\:h-\[620px\] {
     @media (width >= 64rem) {
       height: 620px;
@@ -1923,6 +1918,16 @@
       color: var(--color-black);
     }
   }
+  .dark\:text-gray-700 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-gray-700);
+    }
+  }
+  .dark\:text-gray-900 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-gray-900);
+    }
+  }
 }
 :root {
   --background: #F7F7F7;
@@ -1964,13 +1969,21 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #F7F7F7;
+    --foreground: #171717;
+    --color-text-primary: #0A0A0A;
+    --color-text-secondary: #404040;
+    --color-text-muted: #737373;
   }
 }
 body {
   background-color: var(--background);
   color: var(--foreground);
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .service-radius-slider {
   -webkit-appearance: none;
@@ -1979,7 +1992,11 @@ body {
   height: 16px;
   border-radius: 9999px;
   outline: none;
-  background: linear-gradient(to right, var(--color-text-primary) 0%, var(--color-btn-teritary-300) 0%);
+  background: linear-gradient(
+    to right,
+    var(--color-text-primary) 0%,
+    var(--color-btn-teritary-300) 0%
+  );
   transition: background 0.3s ease;
 }
 .service-radius-slider::-webkit-slider-thumb {
@@ -2011,11 +2028,6 @@ body {
   100% {
     transform: translateX(-50%);
   }
-}
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
 }
 @property --tw-translate-x {
   syntax: "*";
