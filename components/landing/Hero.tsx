@@ -1,8 +1,18 @@
 "use client";
 
+
 import Image from "next/image";
 
 export default function HeroSection() {
+  // Scroll to the 'about' section like Navbar
+  const scrollToAbout = () => {
+    const element = document.getElementById('about');
+    if (!element) return;
+    const navbarOffset = 100;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - navbarOffset;
+    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+  };
   return (
     <section className="relative w-full min-h-[100svh] overflow-hidden">
       {/* Background Image */}
@@ -117,7 +127,9 @@ export default function HeroSection() {
               shadow-md
               text-[14px] sm:text-[15px]
               w-full sm:w-auto
+              cursor-pointer
             "
+            onClick={scrollToAbout}
           >
             Explore BraceFree
           </button>
