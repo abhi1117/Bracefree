@@ -194,6 +194,7 @@ export default function Navbar() {
             transition-all duration-300 ease-out
             hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(40,168,224,0.45)]
             focus:outline-none focus:ring-2 focus:ring-[#28A8E0]/50
+            cursor-pointer
           "
         >
           <svg
