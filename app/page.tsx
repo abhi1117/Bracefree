@@ -4,7 +4,7 @@ import Hero from "../components/landing/Hero";
 import About from "../components/landing/about";
 import Ourvision from "../components/landing/ourvision";
 import FAQSection from "../components/landing/faq";
-import Team from "../components/landing/team";
+// import Team from "../components/landing/team";
 import Footer from "../components/common/Footer";
 import HowItWorks from "@/components/landing/howitworks";
 import Doyouhave from "@/components/landing/doyouhave";
@@ -27,7 +27,7 @@ export default function HomePage() {
         <HowItWorks />
         <Testimonials />
         <Doyouhave />
-        <Team />
+        
         <FAQSection />
         <Footer />
       </div>
