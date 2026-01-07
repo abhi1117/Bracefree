@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Our Vision", id: "vision" },
   { label: "How It Works", id: "howitworks" },
   { label: "Testimonials", id: "testimonials" },
-  { label: "Team", id: "team" },
+  // { label: "Team", id: "team" },
   { label: "FAQs", id: "faq" },
 ];
 
