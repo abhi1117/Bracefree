@@ -12,6 +12,7 @@ export default function Footer() {
       overflow-hidden
     "
     >
+      
       {/* Soft top gradient */}
       <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-black/20 pointer-events-none" />
 
