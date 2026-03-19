@@ -32,7 +32,7 @@ export default function FAQSection() {
     },
     {
       q: "How do I begin BraceFree treatment?",
-      a: "Contact us at hello@BraceFree.in or visit a partner clinic. We’ll guide you through assessment, scans, and aligner delivery.",
+      a: "Contact us at contact@bracefree.in or visit a partner clinic. We’ll guide you through assessment, scans, and aligner delivery.",
     },
   ];
 
