@@ -174,7 +174,7 @@ export default function Footer() {
                 Instagram: @bracefree.in
               </a>
             </li>
-            <li>Phone: +91 9571 246257</li>
+            <li>Phone: +91 9232 142453</li>
             <li>Pune, Maharashtra, India</li>
           </ul>
         </div>
